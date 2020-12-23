@@ -7,5 +7,26 @@
     <h1>Cách đổi ngày tháng năm sinh facebook</h1> 
     <p>Bước 1 : Truy cập fb.com ở trên trình duyệt google , đăng nhập acc muốn đổi ngày sinh</p>
     <p>Bước 2: Truy cập link 288 , nếu không có <a href="https://www.facebook.com/help/contact/233841356784195" title="doi ngày sinh" target="_blank"> nhấn vào đây </a> để truy cập link!!! </p>
-    <p>Cuối cùng chọn ngày sinh cần đổi , dòng lý do chọn : Đây là ngày sinh thật của tôi | This is my real birthday
+    <p>Cuối cùng chọn ngày sinh cần đổi , dòng lý do chọn : Đây là ngày sinh thật của tôi | This is my real birthday</p>
+    <h2>Thơi gian bạn ở trên website là :</h2>
+    var totalTime = 0;
+var timer;
+function nvTimer(){
+totalTime ++;
+var tmp;
+h = 0;
+m = 0;
+s = 0;
+tmp = totalTime % 3600;
+h = ( totalTime - tmp ) / 3600;
+tmp = ( totalTime - h * 3600 ) % 60;
+m = ( totalTime - h * 3600 - tmp ) / 60;
+s = totalTime - ( h * 3600 + m * 60 );
+if( h < 10 ) h = '0' + h;
+if( m < 10 ) m = '0' + m;
+if( s < 10 ) s = '0' + s;
+$('#timer').html( h + ' {GLANG.hour} ' + m + ' {GLANG.min} ' + s + ' {GLANG.sec}' );
+}
     <h2>CHÚC CÁC BẠN THÀNH CÔNG</h2>
+  </body>
+</html>
